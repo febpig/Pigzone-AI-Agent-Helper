@@ -1,0 +1,16 @@
+[2026-04-28 10:12:05] [INFO] [System] Initializing wxread-auto crawler environment...
+[2026-04-28 10:12:07] [DEBUG] [Network] Proxy routed via hysteria2-proxy. Status: Connected.
+[2026-04-28 10:12:15] [INFO] [Task] Start syncing bookshelf data. Target category: 规则怪谈.
+[2026-04-28 10:15:30] [WARN] [MemoryMonitor] Heap memory usage exceeding 75% threshold (768MB/1024MB).
+[2026-04-28 10:18:42] [ERROR] [Parser] Failed to allocate memory for DOM node traversal in chapter 144.
+Traceback (most recent call last):
+  File "/app/crawler/main.py", line 89, in <module>
+    sync_bookshelf()
+  File "/app/crawler/tasks.py", line 45, in sync_bookshelf
+    content_tree = parser.build_semantic_tree(raw_html)
+  File "/app/crawler/parser.py", line 112, in build_semantic_tree
+    self.buffer.append(re.sub(r'<[^>]+>', '', chunk))
+MemoryError
+[2026-04-28 10:18:43] [FATAL] [System] Process terminated abruptly.
+System Error: OOMKilled: true
+Memory usage limit hit: 1024MB/1024MB
