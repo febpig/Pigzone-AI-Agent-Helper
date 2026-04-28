@@ -7,7 +7,7 @@ Markdown
 ![Gemini Pro](https://img.shields.io/badge/AI_Powered-Gemini_Pro-8A2BE2.svg)
 ![Status Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
-基于多智能体（Multi-Agent）协同架构的轻量级边缘节点自动化运维与自愈中枢。专为资源受限的边缘计算设备（如 Armbian 单板、本地化服务器）设计，结合状态感知与 Gemini Pro 的长链推理能力，实现从异常捕获、根因分析到策略下发的全自动闭环。
+基于多智能体（Multi-Agent）协同架构的轻量级边缘节点自动化运维与智能中枢。专为资源受限的边缘计算设备（如 Armbian NAS、本地化服务器）设计，结合状态感知与 Gemini Pro 的长链推理能力，实现从异常捕获、根因分析到策略下发的全自动闭环系统。
 
 ## 核心架构 (Architecture)
 
@@ -20,7 +20,10 @@ graph TD
     C -->|1. 上下文组装<br>2. 多步逻辑推理| C
     C -->|输出 JSON 修复策略<br>Root Cause & Action| D[执行引擎]
     D -->|下发自愈指令<br>Restart/Update| A
-功能特性 (Features)
+```
+
+##功能特性 (Features)
+
 智能态势感知：实时监控本地容器（如 wxread-auto）及自动化脚本的心跳与资源占用状态。
 
 大模型长链推理：接入 Gemini Pro API，对非结构化崩溃日志（如内存溢出、依赖丢失）进行语义级精准诊断。
@@ -38,11 +41,14 @@ graph TD
 凭证获取：前往 Google AI Studio 获取免费的 Gemini API Key。
 
 2. 获取代码与依赖安装
+
 Bash
 
-git clone [https://github.com/你的用户名/Edge-AI-Ops-Agent.git](https://github.com/你的用户名/Edge-AI-Ops-Agent.git)
+git clone [https://github.com/febpig/Pigzone-AI-Agent-Helper.git]
+
 cd Edge-AI-Ops-Agent
 pip install -r requirements.txt
+
 3. 环境配置
 复制配置文件模板并填入你的鉴权信息。
 
@@ -56,6 +62,7 @@ cp .env.example .env
 GEMINI_API_KEY="AIzaSyYourApiKeyHere..."
 MONITOR_TARGET="wxread-auto"
 LOG_PATH="/var/log/containers/"
+
 4. 启动自愈中枢
 在终端直接运行主程序，系统将自动进入巡检与分析工作流。
 
