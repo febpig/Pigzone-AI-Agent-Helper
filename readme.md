@@ -1,6 +1,6 @@
 Markdown
 
-# Edge-AI-Ops-Agent
+# Pigzone-AI-Agent-Helper
 
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
 ![License MIT](https://img.shields.io/badge/License-MIT-green.svg)
